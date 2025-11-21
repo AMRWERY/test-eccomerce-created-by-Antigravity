@@ -17,9 +17,8 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { CheckCircle, XCircle, Info, AlertTriangle, X } from 'lucide-vue-next'
-import { useToast } from '@/composables/useToast'
 
 const { toasts, removeToast } = useToast()
 

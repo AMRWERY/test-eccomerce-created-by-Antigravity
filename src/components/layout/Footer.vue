@@ -140,9 +140,6 @@
     </footer>
 </template>
 
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { computed } from 'vue'
-
+<script lang="ts" setup>
 const currentYear = computed(() => new Date().getFullYear())
 </script>

@@ -1,15 +1,9 @@
 import { openDB, type IDBPDatabase } from 'idb'
+import type { UserData } from '@/types/users'
 
 const DB_NAME = 'ecommerce-db'
 const DB_VERSION = 2 // Increment version to trigger upgrade
 const USERS_STORE = 'users'
-
-interface UserData {
-  email: string
-  password: string
-  name: string
-  createdAt: number
-}
 
 let dbPromise: Promise<IDBPDatabase> | null = null
 
@@ -35,9 +29,9 @@ export const authDB = {
     try {
       const db = await initDB()
       const existing = await db.get(USERS_STORE, email)
-      
+
       console.log('Registration attempt for:', email, 'Existing user:', existing)
-      
+
       if (existing) {
         console.warn('User already exists:', email)
         return false // User already exists
@@ -70,13 +64,13 @@ export const authDB = {
         console.log('Login successful for:', email)
         return user
       }
-      
+
       if (user) {
         console.warn('Password mismatch for:', email)
       } else {
         console.warn('User not found:', email)
       }
-      
+
       return null
     } catch (error) {
       console.error('Login error:', error)

@@ -66,13 +66,9 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { useCartStore } from '@/stores/cart'
-import { useUserStore } from '@/stores/user'
+<script lang="ts" setup>
 import { ArrowLeftRight, X, Star } from 'lucide-vue-next'
-import EmptyState from '@/components/common/EmptyState.vue'
-import type { Product } from '@/stores/product'
+import type { Product } from '@/types/products'
 
 const cartStore = useCartStore()
 const userStore = useUserStore()

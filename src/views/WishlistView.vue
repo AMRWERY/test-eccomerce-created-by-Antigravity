@@ -12,11 +12,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { useCartStore } from '@/stores/cart'
-import ProductCard from '@/components/product/ProductCard.vue'
-import EmptyState from '@/components/common/EmptyState.vue'
+<script lang="ts" setup>
 import { Heart } from 'lucide-vue-next'
 
 const cartStore = useCartStore()

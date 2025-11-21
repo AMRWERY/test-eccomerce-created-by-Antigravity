@@ -101,12 +101,10 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { computed } from 'vue'
-import { RouterLink } from 'vue-router'
-import { useCartStore } from '@/stores/cart'
+<script lang="ts" setup>
 import { Check, Download } from 'lucide-vue-next'
 import jsPDF from 'jspdf'
+import type { CartItem } from '@/types/cart'
 
 const cartStore = useCartStore()
 const order = computed(() => cartStore.lastOrder)
@@ -154,7 +152,7 @@ const downloadPDF = () => {
     // Items
     let yPos = 85
     doc.setFontSize(10)
-    order.value.items.forEach((item) => {
+    order.value.items.forEach((item: CartItem) => {
         const title = item.product.title.length > 50
             ? item.product.title.substring(0, 50) + '...'
             : item.product.title

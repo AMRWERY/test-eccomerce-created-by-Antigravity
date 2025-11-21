@@ -81,12 +81,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
-import { useRoute } from 'vue-router'
-import { useProductStore } from '@/stores/product'
-import { useUserStore } from '@/stores/user'
-import { useCartStore } from '@/stores/cart'
+<script lang="ts" setup>
 import { Star, Heart } from 'lucide-vue-next'
 
 const route = useRoute()

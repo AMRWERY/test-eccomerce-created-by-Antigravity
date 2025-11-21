@@ -1,4 +1,3 @@
-import { createPinia } from 'pinia'
 import { piniaIndexedDBPlugin } from './plugins/persistence'
 
 const pinia = createPinia()

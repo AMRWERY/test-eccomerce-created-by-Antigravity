@@ -56,12 +56,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { useProductStore } from '@/stores/product'
-import ProductCard from '@/components/product/ProductCard.vue'
-
+<script lang="ts" setup>
 const productStore = useProductStore()
 const route = useRoute()
 const router = useRouter()

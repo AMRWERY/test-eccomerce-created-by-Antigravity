@@ -83,11 +83,7 @@
     </Transition>
 </template>
 
-<script setup lang="ts">
-import { ref, watch } from 'vue'
-import { useUserStore } from '@/stores/user'
-import LoadingSpinner from './LoadingSpinner.vue'
-
+<script lang="ts" setup>
 const props = defineProps<{
     isOpen: boolean
 }>()

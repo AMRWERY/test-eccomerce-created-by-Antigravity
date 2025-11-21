@@ -101,6 +101,6 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { Shield, Heart, Leaf, Zap, Check } from 'lucide-vue-next'
 </script>

@@ -10,14 +10,10 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { computed } from 'vue'
+<script lang="ts" setup>
+import type { LoadingSpinnerProps } from '@/types/states'
 
-interface Props {
-    size?: 'sm' | 'md' | 'lg'
-}
-
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<LoadingSpinnerProps>(), {
     size: 'md'
 })
 

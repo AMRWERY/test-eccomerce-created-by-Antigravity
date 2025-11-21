@@ -1,20 +1,6 @@
-import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
-import type { Product } from './product'
-import { useToast } from '@/composables/useToast'
-
-export interface CartItem {
-  product: Product
-  quantity: number
-}
-
-export interface Order {
-  id: string
-  items: CartItem[]
-  total: number
-  date: number
-  status: 'completed' | 'processing' | 'shipped'
-}
+import type { Product } from "@/types/products"
+import type { CartItem } from "@/types/cart"
+import type { Order } from "@/types/orders"
 
 export const useCartStore = defineStore('cart', () => {
   const cartItems = ref<CartItem[]>([])

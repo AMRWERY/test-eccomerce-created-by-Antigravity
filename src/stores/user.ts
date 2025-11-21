@@ -1,19 +1,5 @@
-import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
 import { authDB } from './plugins/authDB'
-
-export interface User {
-  id: string
-  name: string
-  email: string
-  picture?: string
-  address?: {
-    street: string
-    city: string
-    zip: string
-    country: string
-  }
-}
+import type { User } from '@/types/users'
 
 export const useUserStore = defineStore('user', () => {
   const user = ref<User | null>(null)
@@ -33,7 +19,7 @@ export const useUserStore = defineStore('user', () => {
 
   async function register(email: string, password: string, name: string): Promise<{ success: boolean; message: string }> {
     const success = await authDB.registerUser(email, password, name)
-    
+
     if (success) {
       user.value = {
         id: email,
@@ -43,13 +29,13 @@ export const useUserStore = defineStore('user', () => {
       }
       return { success: true, message: 'Registration successful!' }
     }
-    
+
     return { success: false, message: 'Email already registered' }
   }
 
   async function login(email: string, password: string): Promise<{ success: boolean; message: string }> {
     const userData = await authDB.loginUser(email, password)
-    
+
     if (userData) {
       user.value = {
         id: userData.email,
@@ -59,7 +45,7 @@ export const useUserStore = defineStore('user', () => {
       }
       return { success: true, message: 'Login successful!' }
     }
-    
+
     return { success: false, message: 'Invalid email or password' }
   }
 

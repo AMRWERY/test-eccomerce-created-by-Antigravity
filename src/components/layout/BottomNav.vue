@@ -50,10 +50,8 @@
     </nav>
 </template>
 
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
+<script lang="ts" setup>
 import { Home, ShoppingBag, ShoppingCart, GitCompare } from 'lucide-vue-next'
-import { useCartStore } from '@/stores/cart'
 
 const cartStore = useCartStore()
 </script>

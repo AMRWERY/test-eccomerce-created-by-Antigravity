@@ -47,13 +47,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { computed, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-import { useProductStore } from '@/stores/product'
-import Carousel from '@/components/common/Carousel.vue'
-import ProductCard from '@/components/product/ProductCard.vue'
-
+<script lang="ts" setup>
 const productStore = useProductStore()
 const router = useRouter()
 

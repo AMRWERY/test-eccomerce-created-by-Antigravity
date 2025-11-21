@@ -15,19 +15,10 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { type Component } from 'vue'
-import { RouterLink } from 'vue-router'
+<script lang="ts" setup>
+import type { EmptyStateProps } from '@/types/states'
 
-interface Props {
-    icon: Component
-    title: string
-    description: string
-    actionText?: string
-    actionLink?: string
-}
-
-withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<EmptyStateProps>(), {
     actionText: 'Browse Products',
     actionLink: '/products'
 })

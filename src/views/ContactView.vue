@@ -66,6 +66,6 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { Mail, Phone, MapPin } from 'lucide-vue-next'
 </script>

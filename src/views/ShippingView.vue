@@ -50,6 +50,6 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { Truck, Zap, Plane } from 'lucide-vue-next'
 </script>

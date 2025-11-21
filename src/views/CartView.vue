@@ -69,11 +69,8 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { useCartStore } from '@/stores/cart'
+<script lang="ts" setup>
 import { Trash2, ShoppingBag } from 'lucide-vue-next'
-import EmptyState from '@/components/common/EmptyState.vue'
 
 const cartStore = useCartStore()
 </script>

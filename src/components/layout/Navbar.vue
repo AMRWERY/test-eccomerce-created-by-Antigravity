@@ -79,11 +79,7 @@
     </nav>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-import { RouterLink, useRouter } from 'vue-router'
-import { useUserStore } from '@/stores/user'
-import { useDark, useToggle } from '@vueuse/core'
+<script lang="ts" setup>
 import { Sun, Moon, ShoppingBag, Heart, User, LogOut } from 'lucide-vue-next'
 
 const userStore = useUserStore()

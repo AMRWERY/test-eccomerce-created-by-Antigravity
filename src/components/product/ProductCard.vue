@@ -42,12 +42,9 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
+<script lang="ts" setup>
 import { Heart, ArrowLeftRight, Plus } from 'lucide-vue-next'
-import type { Product } from '@/stores/product'
-import { useUserStore } from '@/stores/user'
-import { useCartStore } from '@/stores/cart'
+import type { Product } from '@/types/products'
 
 const props = defineProps<{
     product: Product

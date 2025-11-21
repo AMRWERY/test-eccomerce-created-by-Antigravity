@@ -110,11 +110,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { ref, reactive, onMounted, watch } from 'vue'
-import { useUserStore } from '@/stores/user'
-import { useToast } from '@/composables/useToast'
-
+<script lang="ts" setup>
 const userStore = useUserStore()
 const { showSuccess } = useToast()
 const currentTab = ref('info')

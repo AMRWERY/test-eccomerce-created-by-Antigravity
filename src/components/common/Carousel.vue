@@ -36,8 +36,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+<script lang="ts" setup>
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
 
 const props = defineProps<{

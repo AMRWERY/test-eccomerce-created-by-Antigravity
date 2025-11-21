@@ -90,13 +90,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { useCartStore } from '@/stores/cart'
-import { useToast } from '@/composables/useToast'
-import LoadingSpinner from '@/components/common/LoadingSpinner.vue'
-
+<script lang="ts" setup>
 const router = useRouter()
 const cartStore = useCartStore()
 const { showSuccess } = useToast()

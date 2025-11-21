@@ -1,12 +1,4 @@
-<script setup lang="ts">
-import { RouterView } from 'vue-router'
-import LoginModal from './components/common/LoginModal.vue'
-import Navbar from './components/layout/Navbar.vue'
-import Footer from './components/layout/Footer.vue'
-import BottomNav from './components/layout/BottomNav.vue'
-import { useUserStore } from '@/stores/user'
-import ToastNotification from './components/common/ToastNotification.vue'
-
+<script lang="ts" setup>
 const userStore = useUserStore()
 </script>
 
