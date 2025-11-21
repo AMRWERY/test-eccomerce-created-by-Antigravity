@@ -1,4 +1,5 @@
 import type { Product } from "@/types/products"
+import { env } from '@/config/env'
 
 export const useProductStore = defineStore('product', () => {
   const products = ref<Product[]>([])
@@ -12,8 +13,8 @@ export const useProductStore = defineStore('product', () => {
 
     loading.value = true
     try {
-      // Using fakestoreapi for realistic mock data
-      const res = await fetch('https://fakestoreapi.com/products')
+      // Using API endpoint from environment variables
+      const res = await fetch(env.productsUrl)
       const data = await res.json()
       products.value = data
 
