@@ -54,7 +54,7 @@ const router = useRouter()
 const slides = [
   {
     image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
-    title: 'New Collection 2024',
+    title: 'New Collection 2025',
     description: 'Discover the latest trends in fashion and accessories.'
   },
   {

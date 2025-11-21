@@ -141,7 +141,7 @@ const saveAddress = () => {
 }
 
 const mockOrders = [
-    { id: 'ORD-001', date: '2024-03-15', status: 'Delivered', items: 3, total: 129.99 },
-    { id: 'ORD-002', date: '2024-03-20', status: 'Processing', items: 1, total: 49.99 }
+    { id: 'ORD-001', date: '2025-03-15', status: 'Delivered', items: 3, total: 129.99 },
+    { id: 'ORD-002', date: '2025-03-20', status: 'Processing', items: 1, total: 49.99 }
 ]
 </script>
